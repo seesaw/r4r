@@ -24,6 +24,7 @@ gem 'mysql2', '~> 0.2.11'
 # gem 'aws-s3', :require => 'aws/s3'
 
 gem "jquery-rails"
+gem 'client_side_validations'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators

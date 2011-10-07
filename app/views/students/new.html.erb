@@ -1,7 +1,7 @@
 <h1>&nbsp;</h1>
 <h1>Register for the RailsRumble preparation course!</h1>
 
-<%= form_for(@student) do |f| %>
+<%= form_for(@student, :validate => true) do |f| %>
     <fieldset></fieldset>
     <% if @student.errors.any? %>
         <div id="error_explanation" class="block-message alert-message error">
