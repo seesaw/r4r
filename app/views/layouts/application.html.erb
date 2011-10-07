@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>R4r</title>
-  <%= stylesheet_link_tag :all %>
+  <title>Rails for Rumble preparation course - PIP powered</title>
+  <%= stylesheet_link_tag :all, 'bootstrap.min', 'r4r' %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
 
-<%= yield %>
+<div class="container">
+  <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, id: "flash_#{name}", class: "alert-message #{name}" %>
+      <a class="close" href="#">×</a>
+  <% end -%>
+  <%= yield %>
+</div>
 
 </body>
 </html>

@@ -1,5 +1,57 @@
-<h1>New student</h1>
+<h1>&nbsp;</h1>
+<h1>Register for the RailsRumble preparation course!</h1>
 
-<%= render 'form' %>
+<%= form_for(@student) do |f| %>
+    <fieldset></fieldset>
+    <% if @student.errors.any? %>
+        <div id="error_explanation" class="block-message alert-message error">
+          <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
 
-<%= link_to 'Back', students_path %>
+          <ul>
+            <% @student.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="clearfix">
+      <%= f.label :name %>
+      <div class="input"><%= f.text_field :name, class: 'span8' %></div>
+    </div>
+    <div class="clearfix">
+      <%= f.label :email %>
+      <div class="input">
+        <div class="input-prepend">
+          <span class="add-on">@</span>
+          <%= f.text_field :email, class: 'span6' %>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix">
+      <%= f.label :twitter %>
+      <div class="input">
+        <div class="input-prepend">
+          <span class="add-on"><%= image_tag "twitter-icon.png" %></span>
+          <%= f.text_field :twitter, class: 'span4' %>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix">
+      <%= f.label 'rails skills', for: :level %>
+      <div class="input"><%= f.select :level, options_for_select(['', 'god', 'high', 'intermediate', 'sufficient', 'rookie', 'I like trains'], @student.level), class: 'xlarge' %></div>
+    </div>
+    <div class="clearfix">
+      <%= f.label 'want to cover specific topics?', for: :wishes %>
+      <div class="input"><%= f.text_area :wishes, class: 'span8', rows: 5 %></div>
+    </div>
+    <div class="clearfix">
+      <%= f.label 'any suggestions?', for: :suggestions %>
+      <div class="input"><%= f.text_area :suggestions, class: 'span8', rows: 5 %>
+        <span class="help-block">Don't be shy!</span>
+      </div>
+    </div>
+    <div class="actions">
+      <%= f.submit 'I want a seat!', class: 'btn large primary success' %>
+    </div>
+<% end %>

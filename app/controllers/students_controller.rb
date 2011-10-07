@@ -17,7 +17,7 @@ class StudentsController < ApplicationController
 
     respond_to do |format|
       if @student.save
-        format.html { redirect_to(@student, :notice => 'Student was successfully created.') }
+        format.html { redirect_to root_path, :notice => 'Thank you for signing up! We\'ll keep in touch!' }
         format.xml  { render :xml => @student, :status => :created, :location => @student }
       else
         format.html { render :action => "new" }
