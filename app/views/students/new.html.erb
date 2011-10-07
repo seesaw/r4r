@@ -5,7 +5,7 @@
     <fieldset></fieldset>
     <% if @student.errors.any? %>
         <div id="error_explanation" class="block-message alert-message error">
-          <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+          <h2><%= pluralize(@student.errors.count, "error") %> prohibited this reservation from being saved:</h2>
 
           <ul>
             <% @student.errors.full_messages.each do |msg| %>

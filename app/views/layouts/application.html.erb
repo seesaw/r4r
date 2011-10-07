@@ -8,6 +8,7 @@
 </head>
 <body>
 
+<div id="omino_mistico"><%= image_tag 'dexter.jpg' %></div>
 <div class="container">
   <% flash.each do |name, msg| -%>
       <%= content_tag :div, msg, id: "flash_#{name}", class: "alert-message #{name}" %>
