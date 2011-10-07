@@ -32,8 +32,8 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: r4r_production
-  pool: 5
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+  database: r4r
+  pool: 2
+  username: r4r
+  password: r4r
+  socket: /var/run/mysqld/mysqld.sock
