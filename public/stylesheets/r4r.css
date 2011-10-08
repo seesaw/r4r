@@ -6,7 +6,11 @@
     opacity: 0.65;
 }
 
-.alert-message {
+.alert-message.error {
+    width: 80%;
+}
+
+.alert-message.success {
     position: absolute;
     top: 15px;
     width: 40%;
