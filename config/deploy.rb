@@ -4,7 +4,7 @@ set :user, "deploy"
 # repo details
 set :scm, :git
 set :branch, 'master'
-set :repository, "#{user}@fuzziland.it:/srv/repos/git/#{application}.git"
+set :repository, "git@github.com:seesaw/#{application}.git"
 
 # server details
 default_run_options[:pty] = true
