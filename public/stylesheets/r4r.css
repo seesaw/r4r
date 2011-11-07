@@ -18,3 +18,19 @@
     font-size: 18px;
 }
 
+body {
+  padding-top: 60px;
+}
+
+.hero-unit {
+/*	background: url('/images/pratodellavalle.jpg') 0px -80px; */
+	background: url('/images/oldschool.jpg') 0px -230px;	
+}
+
+.hero-unit h1 {
+	color: #FF0000;
+}
+
+.hero-unit p {
+	color: #FF5555;
+}

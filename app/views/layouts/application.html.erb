@@ -1,23 +1,58 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Rails for Rumble preparation course - PIP powered</title>
-  <%= stylesheet_link_tag :all, 'bootstrap.min', 'r4r' %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
 
-<div id="omino_mistico"><%= image_tag 'dexter.jpg' %></div>
-<div class="container">
-  <% flash.each do |name, msg| -%>
-      <% content_tag :div, id: "flash_#{name}", class: "alert-message #{name == :notice ? 'success' : name}" do %>
-          <%= msg -%>
-          <a class="close" href="#">×</a>
-      <% end -%>
-  <% end -%>
-  <%= yield %>
-</div>
+	  <title>Rails for Rumble preparation course - PIP powered</title>
+	  <%= stylesheet_link_tag 'bootstrap.min', 'r4r' %>
+	  <%= stylesheet_link_tag 'page' if controller.action_name != 'index' %>
+	  <%= javascript_include_tag :defaults %>
+	  <%= csrf_meta_tag %>
 
-</body>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"> -->
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="/">Rails<span style="color: red; font-style: italic">4</span>Rumble</a>
+          <ul class="nav">
+            <li <%=raw controller.action_name == 'index' 		? 'class="active"' : '' %>><a href="/">Home</a></li>
+            <li <%=raw controller.action_name == 'courses' 	? 'class="active"' : '' %>><a href="/courses">Programma</a></li>
+            <li <%=raw controller.action_name == 'register'	? 'class="active"' : '' %>><a href="#contact">Registrati</a></li>
+            <li <%=raw controller.action_name == 'faqs' 			? 'class="active"' : '' %>><a href="/faq">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+			<% flash.each do |name, msg| -%>
+			    <% content_tag :div, id: "flash_#{name}", class: "alert-message #{name == :notice ? 'success' : name}" do %>
+			        <%= msg -%>
+			        <a class="close" href="#">×</a>
+			    <% end -%>
+			<% end -%>
+			<%= yield %>
+      <footer>
+       <!-- <p>&copy; Company 2011</p> -->
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
 </html>
