@@ -19,10 +19,14 @@
 
 .row
   .span5
-    %h2 Cos&#39;&egrave; Rails4Rumble?
+    %h2 RailsRumble ?!?
     %p 
       %b RailsRumble 
-      &egrave; una coding competition di 48h durante la quale gruppi di sviluppatori di tutto il mondo si sfidano sviluppando e deployando da zero una webapp scritta in Ruby on Rails. 
+      %a{:href=>'http://blog.railsrumble.com/'} (sito ufficiale)
+      &egrave; una coding competition di 48h durante la quale gruppi di sviluppatori di tutto il mondo si sfidano sviluppando e deployando da zero una webapp scritta in Ruby on Rails.
+      %br
+      %a{:href=>'http://archive.railsrumble.com/'} Guarda cosa si riesce a fare in 48h
+    %h2 Pronti? via!
     %p 
       Per la prossima edizione tutti i programmers-in-padua sono ufficialmente invitati, e tramite il corso 
       %b Rails4Rumble 
@@ -30,40 +34,39 @@
     
     -#%p Ogni anno gli sviluppatori Rails di tutto il mondo si prendono un intero weekend di irreperibilità da mogli, clienti e famiglie. In piccoli gruppi si barricano in casa o in ufficio, qualcuno addirittura su una barca. In appena 48h e partendo da zero dovranno sviluppare e deployare una webapp completa. Quest&#39;anno programmers-in-padua vuole dare una casa tutta  pi&ugrave; cool di tutte
      
-
-  .span5.offset1
-    .media-grid
-      %img.thumbnail{:src=>"https://maps.googleapis.com/maps/api/staticmap?center=Via+XX+Settembre,+63+Padova&zoom=15&size=275x198&maptype=roadmap&markers=color:blue|label:Here|Via+XX+Settembre+63+Padova&sensor=false"}/
  
-  .span5
+  .span5.offset1
     %h2 Il corso
-    %p 
-      Abbiamo attivato 2 classi, una 
+    %p
+      Abbiamo organizzato un corso su 
+      %b RubyOnRails
+      suddiviso in 2 classi,  
       %b base 
-      e una 
-      %b intermediate
-      \. &Egrave; un&#39;occasione molto speciale per studiare una nuova (e richiestissima) tecnologia con l&#39;aiuto di un docente davvero in gamba. 
+      e  
+      %b intermediate      
+      \.
+      %br
+      &Egrave; un&#39;occasione molto speciale per studiare una nuova (e richiestissima) tecnologia con l&#39;aiuto di un docente davvero in gamba. 
       = link_to raw("Il corso &raquo;"), courses_path, :class=>"btn small"   
+      
+      %p 
+        Scarica la
+        %a{:href=>"/images/rails4rumble.pdf"} locandina del corso
+        ,stampala e appendila in ufficio o dove fai lezione :)
+      
+      %img.thumbnail{:src=>"/images/locandina.jpg", :width=>'270px'}
+      
+  .span5
+    %h2 Dove?
     %p 
-      Le lezioni si terranno presso
-      %br/
+      Le lezioni si terranno a
       %b
         &ldquo;La forma del libro&rdquo;
       %br/ 
       %a{:href=>"http://g.co/maps/p34hb"} 
         Via XX Settembre, 63 Padova 
-      %span.label.notice map
-      
-      
-.row
-  .span6
-    %img.thumbnail{:src=>"/images/locandina.jpg"}
-    
-  .span5
-    %h2 Locandina
-    %p 
-      Abbiamo preparato una fantastica locandina! Per favore scaricala, stampala e appendila in ufficio o dove fai lezione :)
-      
-    %p 
-      %a.btn{:href=>"/images/rails4rumble.pdf"} Download
-             
+      %span.label.notice map    
+      .media-grid
+      %img.thumbnail{:src=>"https://maps.googleapis.com/maps/api/staticmap?center=Via+XX+Settembre,+63+Padova&zoom=15&size=275x295&maptype=roadmap&markers=color:blue|label:Here|Via+XX+Settembre+63+Padova&sensor=false"}/
+
+     

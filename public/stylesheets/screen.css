@@ -94,3 +94,8 @@ h2.fee {
 .row {
   margin-bottom: 18px;
 }
+
+/* line 82, ../../app/stylesheets/screen.sass */
+ol li {
+  margin-bottom: 5px;
+}
