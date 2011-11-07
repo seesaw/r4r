@@ -89,3 +89,8 @@ h2.fee {
   padding-left: 50px;
   background: url(/images/tag.png) no-repeat;
 }
+
+/* line 79, ../../app/stylesheets/screen.sass */
+.row {
+  margin-bottom: 18px;
+}
