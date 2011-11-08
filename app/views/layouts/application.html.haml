@@ -3,7 +3,10 @@
   %head
     %meta{:charset=>"utf-8"}
 
-    %title Rails 4 Rumble - preparation course - PIP powered
+    %title 
+      Rails4Rumble &ndash;  
+      = controller.action_name
+      &ndash; PIP powered
     = stylesheet_link_tag 'bootstrap.min'  
     = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
     = stylesheet_link_tag 'print.css', :media => 'print'
@@ -18,6 +21,16 @@
     %script{:src=>"http://html5shim.googlecode.com/svn/trunk/html5.js"}
     <![endif]-->
 
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-26883944-1']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
 
   %body
 
@@ -38,6 +51,10 @@
               %a{href: "/courses"} Corso
             %li{:class => controller.action_name == 'faq'       ? 'active' : ''}
               %a{href: "/faq"} FAQs
+
+
+          %a{:href=> "https://twitter.com/share", :class=> "twitter-share-button", "data-text" => "#programmersinpadua manda una call to action a tutti i dev rails d\'Italia! #rails4rumble", "data-count" => "horizontal"} Tweet
+          %script{:type => "text/javascript", :src => "http://platform.twitter.com/widgets.js"}
 
     .container
       - flash.each do |name, msg|
