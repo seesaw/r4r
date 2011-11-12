@@ -125,7 +125,7 @@ footer p {
 }
 /* line 105, ../../app/stylesheets/screen.sass */
 footer p a {
-  line-heigth: 20px;
+  line-height: 1.5em;
   background-repeat: no-repeat;
   background-position: top left;
 }
