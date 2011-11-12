@@ -123,3 +123,19 @@ footer p {
   text-align: center;
   font-size: 0.9em;
 }
+/* line 105, ../../app/stylesheets/screen.sass */
+footer p a {
+  line-heigth: 20px;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+/* line 110, ../../app/stylesheets/screen.sass */
+footer p a.pip {
+  padding-left: 20px;
+  background-image: url(/images/pip_footer.png);
+}
+/* line 114, ../../app/stylesheets/screen.sass */
+footer p a.seesaw {
+  padding-left: 60px;
+  background-image: url(/images/seesaw_footer.png);
+}
